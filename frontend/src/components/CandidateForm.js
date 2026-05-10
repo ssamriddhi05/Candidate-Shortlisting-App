@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const CandidateForm = () => {
+const CandidateForm = ({ onAdd }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -29,6 +29,8 @@ const CandidateForm = () => {
       await axios.post("https://candidate-shortlisting-app.onrender.com/api/candidates", payload);
 
       alert("Candidate Added Successfully");
+
+      onAdd();
 
       setFormData({
         name: "",
