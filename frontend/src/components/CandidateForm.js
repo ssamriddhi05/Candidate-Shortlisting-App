@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const CandidateForm = ({ onAdd }) => {
+const CandidateForm = ({}) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -30,7 +30,7 @@ const CandidateForm = ({ onAdd }) => {
 
       alert("Candidate Added Successfully");
 
-      onAdd();
+      // onAdd();
 
       setFormData({
         name: "",
