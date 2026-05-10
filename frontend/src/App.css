@@ -1,0 +1,9 @@
+.app-container {
+  width: 100%;
+  max-width: 900px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  text-align: center;
+}
