@@ -30,8 +30,6 @@ const CandidateForm = ({}) => {
 
       alert("Candidate Added Successfully");
 
-      // onAdd();
-
       setFormData({
         name: "",
         email: "",
