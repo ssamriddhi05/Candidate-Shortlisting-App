@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const CandidateList = () => {
+const CandidateList = ({ refresh }) => {
   const [candidates, setCandidates] = useState([]);
 
   useEffect(() => {
     fetchCandidates();
-  }, []);
+  }, [refresh]);
 
   const fetchCandidates = async () => {
     try {
