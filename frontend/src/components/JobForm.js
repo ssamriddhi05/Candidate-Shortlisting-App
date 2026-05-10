@@ -35,7 +35,7 @@ const JobForm = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/match",
+        "https://candidate-shortlisting-app.onrender.com/api/match",
         payload,
       );
 
@@ -58,7 +58,7 @@ const JobForm = () => {
       setLoading(true);
 
       const response = await axios.post(
-        "http://localhost:8000/api/ai/shortlist",
+        "https://candidate-shortlisting-app.onrender.com/api/ai/shortlist",
         payload,
       );
 
