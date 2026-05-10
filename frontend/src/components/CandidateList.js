@@ -6,7 +6,7 @@ const CandidateList = () => {
 
   useEffect(() => {
     fetchCandidates();
-  });
+  },[]);
 
   const fetchCandidates = async () => {
     try {
