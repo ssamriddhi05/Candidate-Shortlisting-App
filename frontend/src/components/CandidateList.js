@@ -10,7 +10,7 @@ const CandidateList = () => {
 
   const fetchCandidates = async () => {
     try {
-      const response = await axios.get("https://candidate-shortlisting-app.onrender.com/api/candidates/");
+      const response = await axios.get("https://candidate-shortlisting-app.onrender.com/api/candidates");
 
       setCandidates(response.data);
     } catch (error) {
