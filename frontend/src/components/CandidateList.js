@@ -10,7 +10,7 @@ const CandidateList = () => {
 
   const fetchCandidates = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/api/candidates");
+      const response = await axios.get("https://candidate-shortlisting-app.onrender.com");
 
       setCandidates(response.data);
     } catch (error) {
@@ -20,7 +20,7 @@ const CandidateList = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:8000/api/candidates/${id}`);
+      await axios.delete(`https://candidate-shortlisting-app.onrender.com/${id}`);
 
       fetchCandidates();
     } catch (error) {
@@ -34,7 +34,7 @@ const CandidateList = () => {
     if (!updatedName) return;
 
     try {
-      await axios.put(`http://localhost:8000/api/candidates/${candidate._id}`, {
+      await axios.put(`https://candidate-shortlisting-app.onrender.com/${candidate._id}`, {
         ...candidate,
         name: updatedName,
       });
