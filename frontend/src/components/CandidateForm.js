@@ -22,7 +22,7 @@ const CandidateForm = () => {
 
     const payload = {
       ...formData,
-      skills: formData.skills.split(","),
+      skills: formData.skills.split(",").map((s)=> s.trim()),
     };
 
     try {
@@ -38,7 +38,8 @@ const CandidateForm = () => {
         bio: "",
       });
 
-      window.location.reload();
+      // window.location.reload();
+      
     } catch (error) {
       console.log(error);
 
