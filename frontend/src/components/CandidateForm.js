@@ -38,7 +38,9 @@ const CandidateForm = () => {
         bio: "",
       });
 
-      // window.location.reload();
+      if (window.refreshCandidates) {
+      window.refreshCandidates();
+      }
       
     } catch (error) {
       console.log(error);
