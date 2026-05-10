@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const CandidateForm = ({}) => {
+const CandidateForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -22,7 +22,7 @@ const CandidateForm = ({}) => {
 
     const payload = {
       ...formData,
-      skills: formData.skills.split(",").map((s)=> s.trim()),
+      skills: formData.skills.split(",").map((s) => s.trim()),
     };
 
     try {
@@ -38,9 +38,6 @@ const CandidateForm = ({}) => {
         bio: "",
       });
 
-      if (window.refreshCandidates) {
-      window.refreshCandidates();
-      }
       
     } catch (error) {
       console.log(error);
