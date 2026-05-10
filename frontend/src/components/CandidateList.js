@@ -4,10 +4,6 @@ import axios from "axios";
 const CandidateList = () => {
   const [candidates, setCandidates] = useState([]);
 
-  useEffect(() => {
-    fetchCandidates();
-  },[]);
-
   const fetchCandidates = async () => {
     try {
       const response = await axios.get("https://candidate-shortlisting-app.onrender.com/api/candidates");
@@ -17,6 +13,10 @@ const CandidateList = () => {
       console.log(error);
     }
   };
+
+  useEffect(() => {
+    fetchCandidates();
+  },[]);
 
   const handleDelete = async (id) => {
     try {
