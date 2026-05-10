@@ -26,7 +26,7 @@ const CandidateForm = () => {
     };
 
     try {
-      await axios.post("http://localhost:8000/api/candidates", payload);
+      await axios.post("https://candidate-shortlisting-app.onrender.com", payload);
 
       alert("Candidate Added Successfully");
 
